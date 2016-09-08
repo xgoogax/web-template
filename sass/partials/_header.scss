@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    height: 400px;
+    background: url("../images/img025.jpg") center;
+    .container {
+        .photo-wrapper {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            //            border: 2px solid blue;
+            margin: 0 auto;
+            background-color: rgba(224, 232, 230, 0.47);
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9cd1ac+0,9cd1ac+14,9cd1ac+75&0+0,0.6+46,0+100 */
+//            background: -moz-linear-gradient(right, rgba(156,209,172,0) 0%, rgba(156,209,172,0.18) 14%, rgba(70, 66, 81, 0.6) 46%, rgba(156,209,172,0.28) 75%, rgba(156,209,172,0) 100%); /* FF3.6-15 */
+//            background: -webkit-linear-gradient(right, rgba(156,209,172,0) 0%,rgba(156,209,172,0.18) 14%,rgba(70, 66, 81, 0.6) 46%,rgba(156,209,172,0.28) 75%,rgba(156,209,172,0) 100%); /* Chrome10-25,Safari5.1-6 */
+//            background: linear-gradient(to left, rgba(32, 13, 34, 0.31) 0%,rgba(47, 35, 88, 0.28) 14%,rgba(70, 66, 81, 0.5) 46%,rgba(47, 35, 88, 0.28) 75%,rgba(32, 13, 34, 0.31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cd1ac', endColorstr='#009cd1ac',GradientType=0 ); /* IE6-9 */
+            img {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                width: 230px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+#menu{
+    height: 80px;
+    ul {
+        float: right;
+        width: 100%;
+        li {
+            float: left;
+            line-height: 80px;
+            display: inline-block;
+            margin-right: 0;
+            width: 25%;
+            text-align: center;
+            a:link {
+                color: black;
+                text-decoration: none;
+            }
+            a:visited{
+                color: black;
+                text-decoration: none;
+            }
+        }
+        li:hover{
+            width: 244px;
+            font-weight: 700;
+            border-left: 3px solid #464251;
+            border-right: 3px solid #464251;
+        }
+    }
+}

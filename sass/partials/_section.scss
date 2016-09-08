@@ -1,0 +1,48 @@
+#achievements{
+    .container{
+        .left {       
+            @extend %left;
+            text-align: center;
+            line-height: 200px;
+        }
+        .right{
+            @extend %right;
+            text-align: center;
+            line-height: 200px;
+        }
+    }
+}
+
+
+#thoughts{
+    .container{
+        position: relative;
+        height: 300px;
+        h3{
+            border-bottom: 4px solid rgb(70,66,81);
+            display: inline-block;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        h3.date{
+            float: right;
+            display: inline-block;
+            margin-right: 100px;
+            border: none;
+        }
+        p {
+            position: absolute;
+            display: block;
+            font-family: "Josefin Sans", Arial, sans-serif;
+            text-align: center;
+            font-size: 25px;
+            top: 50%;
+            left:0;
+            transform: translate(0%, -50%);
+            margin: 15px 15%;
+            border-radius: 10px;
+
+
+        }
+    }
+}

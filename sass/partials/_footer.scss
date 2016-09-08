@@ -1,0 +1,26 @@
+footer{
+    width: 100%;
+    background-color: rgb(224, 232, 230);
+    .container{
+        height: 100px;
+        .contact{
+            float: left;
+            display: inline-block;
+            li {
+            list-style-type: none;
+            margin-left: 30px;
+            line-height: 25px;
+                a:visited{
+                    color: #198e8e;
+            }
+                a:clicked{
+                    color: #198e8e;
+                }
+            }
+        }
+        .thankyou{
+            float: right;
+            line-height: 100px;
+        }
+    }    
+}

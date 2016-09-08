@@ -1,0 +1,43 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
+//    border: 3px solid black;
+    border-top: 2px dashed #484864;
+    border: 2px solid red;
+    
+}
+
+header {
+    .container:first-of-type{
+        border-top: none;
+    }
+}
+
+//.clearfix {
+//    content: '';
+//    display: table;
+//    clear: both;
+//}
+
+.clearfix::before, .clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+h2{
+    text-align: center;
+}
+
+section {
+    background-color: $mainColor;
+}
