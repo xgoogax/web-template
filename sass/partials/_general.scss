@@ -11,8 +11,8 @@ body {
     width: $containerWidth;
     margin: 0 auto;
 //    border: 3px solid black;
-    border-top: 2px dashed #484864;
-    border: 2px solid red;
+//    border-top: 2px dashed #484864;
+//    border: 2px solid red;
     
 }
 
@@ -40,4 +40,11 @@ h2{
 
 section {
     background-color: $mainColor;
+    .container{
+    border-bottom: 2px dashed $additionalColor;
+}
+}
+
+.hidden{
+    display: none;
 }
