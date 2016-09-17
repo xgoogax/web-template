@@ -3,31 +3,30 @@
         height: 200px;
         position: relative;
         .slider {
-           height: 200px;
-           width: 600px;
-           overflow: hidden;
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%, -50%);
+            height: 200px;
+            width: 600px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             ul {
                 list-style: none;
                 margin: 0;
                 padding: 0;
             }
             li {
-                float:left;
+                float: left;
                 width: 600px;
                 height: 200px;
-//                display: inline-block;
                 text-align: center;
                 top: 20%;
                 left: 0;
-                transform: translate(0, 30%);   
+                transform: translate(0, 30%);
+                font-size: 20px;
             }
-            }
-    
-        .change{
+        }
+        .change {
             position: absolute;
             top: 0;
             font-size: 40px;
@@ -35,19 +34,17 @@
             line-height: 200px;
             color: $additionalColor;
         }
-        .prev{
+        .prev {
             float: left;
             left: 0;
             z-index: 3;
         }
-        .next{
-            float:right;
+        .next {
+            float: right;
             right: 0;
         }
-        
     }
 }
-    
 
 #achievements {
     .container {
@@ -61,27 +58,33 @@
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 25px;
-    .left {
+.left {
         @extend %left;
         text-align: center;
         line-height: 200px;
-        background-color: #e8f1f0;
     }
+    
     .right {
         @extend %right;
         text-align: center;
         line-height: 200px;
-        background-color: #e8f1f0;
     }
-    p{
+    p {
         margin-top: -170px;
         font-size: 15px;
     }
 }
-
 .experience {
     width: 99.4%;
-    background-color: #e8f1f0;
+    background: rgb(198, 196, 198);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(198, 196, 198, 1) 0%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 56%, rgba(198, 196, 198, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(198, 196, 198, 1) 0%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 56%, rgba(198, 196, 198, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(198, 196, 198, 1) 0%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 56%, rgba(198, 196, 198, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c4c6', endColorstr='#c6c4c6', GradientType=0);
     border: 3px solid $additionalColor;
     ul {
         li {
@@ -124,60 +127,181 @@
     }
 }
 
-#hobby{
-    .container{
+#hobby {
+    .container {
         position: relative;
-        .list-of-hobbies{
+        .list-of-hobbies {
             height: 300px;
             display: flex;
             justify-content: center;
         }
-        .row{
+        .row {
             width: auto;
         }
-        .thing{
+        .thing {
             float: left;
             width: 220px;
             height: 220px;
-//            border: 1px solid red;
+            //            border: 1px solid red;
             margin-left: 25px;
             margin-top: 30px;
             margin-bottom: 10px;
             overflow: hidden;
-            
             img {
                 width: 100%;
                 height: 100%;
-                .description{
+                .description {
                     display: none;
                 }
             }
-            
         }
-                    .thing:hover{
+        .thing:hover {
+            position: relative;
+            -webkit-box-shadow: 1px -1px 16px 5px rgba(70, 66, 81, 1);
+            -moz-box-shadow: 1px -1px 16px 5px rgba(70, 66, 81, 1);
+            box-shadow: 1px -1px 16px 5px rgba(70, 66, 81, 1);
+            .description {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 30%;
+                bottom: 20px;
+                left: 0;
+                z-index: 999;
+                background-color: rgba($mainColor, 0.4);
+                p {
+                    line-height: 50px;
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+            }
+        }
+        .thing:first-of-type {
+            margin-left: 0;
+        }
+        .thing:last-of-type {
+            //            margin-left: 
+        }
+    }
+}
+
+@media all and #{$phone} {
+    #aboutme {
+        .container {
+            height: 200px;
+            .slider {
+                width: 90vw;
+                li {
+                    width: 90vw;
+                }
+            }
+        }
+    }
+    #achievements {
+        .container {
+            height: 500px;
+            .left {
+                width: 90vw;
+                margin-left: 0;
+            }
+            .right {
+                width: 90vw;
+                border-left: 3px solid $additionalColor;
+                float: left;
+            }
+        }
+    }
+    #thoughts {
+        .container {
+            height: 500px;
+            h3.date {
+                margin-right: 0;
+            }
+            p {
+                font-size: 20px;
+                display: inline;
+            }
+        }
+    }
+    #hobby {
+        .container {
+            height: 1000px;
+            .list-of-hobbies {
+                display: block;
+                height: 1000px;
                 position: relative;
-                .description{
-                    position: absolute;
+                .row {
+                    width: 100vw;
                     display: block;
-                    width: 100%;
-                    height: 30%;
-                    bottom: 20px;
-                    left: 0;
-                    z-index: 999;
-                    background-color: rgba($mainColor, 0.4);
-                    p {
-                       line-height: 50px;
-                        text-align: center;
-                        font-weight: 700;
-                        font-size: 30px;
+                    .thing {
+                        width: 90vw;
+                        margin-top: 3vw;
+                        margin-left: 0;
+                        //                border-radius: 10px;
                     }
                 }
             }
-        .thing:first-of-type{
-            margin-left: 0;
         }
-        .thing:last-of-type{
-//            margin-left: 
+    }
+}
+
+@media all and #{$tablet} {
+    #aboutme {
+        .container {
+            height: 200px;
+            .slider {
+                width: 90vw;
+                li {
+                    width: 90vw;
+                }
+            }
+        }
+    }
+    #achievements {
+        .container {
+            height: 500px;
+            .left {
+                width: 90vw;
+                margin-left: 0;
+            }
+            .right {
+                width: 90vw;
+                border-left: 3px solid $additionalColor;
+                float: left;
+            }
+        }
+    }
+    #thoughts {
+        .container {
+            height: 400px;
+            h3.date {
+                margin-right: 0;
+            }
+            p {
+                font-size: 20px;
+                display: inline;
+            }
+        }
+    }
+    #hobby {
+        .container {
+            height: 550px;
+            .list-of-hobbies {
+                display: block;
+                height: 550px;
+                position: relative;
+                .row {
+                    width: 90vw;
+                    display: block;
+                    .thing {
+                        width: 44vw;
+                        margin-top: 3vw;
+                        margin-left: 1vw;
+                        //                border-radius: 10px;
+                    }
+                }
+            }
         }
     }
 }

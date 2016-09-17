@@ -1,6 +1,6 @@
 footer{
     width: 100%;
-    background-color: rgb(224, 232, 230);
+    background-color: $mainColor;
     .container{
         height: 100px;
         .contact{
@@ -23,4 +23,23 @@ footer{
             line-height: 100px;
         }
     }    
+}
+
+@media all and #{$phone} {
+    footer{
+    .container{
+        height: 140px;
+        .thankyou{
+            line-height: 30px;
+        }
+    }
+}
+}
+
+@media all and #{$tablet} {
+    footer{
+        .container{
+            height: 100px;
+        }
+    }
 }
